@@ -10,9 +10,15 @@ function speak(text) {
     window.speechSynthesis.speak(textSpeech);
 }
 
-function welcomeUser() {
+function getPakistanTime() {
     const date = new Date();
-    const hour = date.getHours();
+    const utcHour = date.getUTCHours();
+    const pakistanHour = (utcHour + 5) % 24;
+    return pakistanHour;
+}
+
+function welcomeUser() {
+    const hour = getPakistanTime();
 
     if (hour >= 0 && hour < 12) {
         speak("Good Morning sir");
@@ -50,6 +56,9 @@ function takeCommand(message) {
         speak("I'm Robo, your virtual assistant, developed by Muhammad Samad sir");
     }else  if (message.includes('hey') || message.includes('hello')) {
         speak("Hello Sir, how can I help you?");
+    } else if (message.includes("open tiktok")){
+        window.open("https://www.tiktok.com", "_blank");
+        speak("opening tiktok")
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
         speak("Opening Google...");
@@ -62,7 +71,7 @@ function takeCommand(message) {
     } else if (message.includes("open instagram")) {
         window.open("https://instagram.com", "_blank");
         speak("Opening Instagram...");
-    } else if (message.includes("open github")) {
+    } else if (message.includes("open github") || message.includes("open get up")) {
         speak("Opening GitHub");
         window.open("https://github.com", "_blank");
      } else if (message.includes("open linkedin")) {
