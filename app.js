@@ -56,7 +56,7 @@ function takeCommand(message) {
         speak("I'm Robo, your virtual assistant, developed by Muhammad Samad sir");
     }else  if (message.includes('hey') || message.includes('hello')) {
         speak("Hello Sir, how can I help you?");
-    } else if (message.includes("open tiktok")){
+    } else if (message.includes("open tiktok").trim()){
         window.open("https://www.tiktok.com", "_blank");
         speak("opening tiktok")
     } else if (message.includes("open google")) {
