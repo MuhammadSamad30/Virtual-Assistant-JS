@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 10%;
+  overflow-y: hidden;
+  background-image: linear-gradient(
+      0deg,
+      transparent 0%,
+      transparent 26%,
+      rgba(142, 36, 180, 0.15) 26%,
+      rgba(142, 36, 180, 0.15) 56%,
+      transparent 56%,
+      transparent 100%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 36%,
+      rgba(142, 36, 180, 0.15) 36%,
+      rgba(142, 36, 180, 0.15) 71%,
+      transparent 71%,
+      transparent 100%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 31%,
+      rgba(142, 36, 180, 0.15) 31%,
+      rgba(142, 36, 180, 0.15) 56%,
+      transparent 56%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+.heading {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+.headspan {
+  color: #59bd44;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20%;
+}
+.welcome{
+    color: #ffffff;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.robot-img{
+  width: 30%;
+  height: 30%;
+  padding-bottom: 20px;
+  filter: drop-shadow(0 10px 15px rgba(34, 218, 89, 0.7));
+}
+
+.name {
+  color: #4edb0d;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(103, 60, 128, 0.6);
+}
+
+#btn {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 50%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#btn:active,
+#btn:hover {
+  outline: 0;
+}
+
+#btn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+#btn:hover span {
+  background: none;
+}
+
+#search i {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  
+   body{
+    overflow-y: hidden;
+   } 
+  
+   
+  .heading {
+    font-size: 29px;
+    padding: 5px;
+  }
+
+  .container {
+    padding-top: 20%;
+  }
+
+  .robot-img {
+    width: 68%;
+    height: 30%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .name {
+    font-size: 27px;
+  }
+
+  #btn {
+    font-size: 18px;
+    width: 60%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  #search {
+    text-align: start;
+    padding-right: 5px;
+    padding-left: 0;
+  }
+}
